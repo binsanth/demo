@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="text-align:center;background-color:cyan">
+<h1>Sign-Up</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    <label>Enter the First name  :</label>
+      <input type="text" name="firstname"><br><br>
+    <label>Enter the Last name  :</label>
+      <input type="text" name="lastname"><br><br>
+    <label>Enter your E-mail : </label>
+      <input type="email" name="email"><br><br>
+     <label>Enter the username  :</label>
+      <input type="text" name="username"><br><br>
+    <input type="checkbox" name="check"> I accept the <a href="https://www.google.com"> Terms & conditions</a><br><br>
+    <h4>Set Password</h4>
+    <input type="password" name="password" placeholder="Enter your password "><br>
+    <input type="password" name="cpassword" placeholder="Confirm your password"><br><br>
+    <input type="submit" value="Sign-up">
+</form>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+</body>
+</html>
